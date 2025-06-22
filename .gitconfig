@@ -1,0 +1,37 @@
+[user]
+	name = Samarth Sanjay Pyati
+	email = samarthpyati@gmail.com
+	password = <password>
+
+[core]
+	autocrlf = input
+	compression = 9
+	editor = vim
+	whitespace = error 
+	preloadindex = true
+
+[credential]
+	helper = cache
+	useHttpPath = true
+	helper = /usr/local/share/gcm-core/git-credential-manager
+
+[color]
+	ui = true
+
+[credential "https://huggingface.co"]
+	provider = generic
+
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+
+[init]
+	defaultBranch = main
+
+# use git push -u to push the current branch as upstream
+[push]
+	default = current
+
+# My URL alias 
+[url "https://github.com/SamarthPyati/"]
+	insteadOf = "sp:"
+
