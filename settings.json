@@ -1,0 +1,47 @@
+{
+    "editor.fontFamily": "Fira Mono for Powerline",
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "editor.fontSize": 14, 
+    "workbench.colorTheme": "Predawn",
+    "workbench.activityBar.location": "default",
+    "workbench.sideBar.location": "right",
+    "terminal.integrated.fontWeightBold": "normal",
+    "workbench.editorAssociations": {
+        "*.mp4": "analyticsignal.preview-mp4"
+    },
+    "liveServer.settings.donotShowInfoMsg": true,
+    "accessibility.signals.terminalBell": {
+        "sound": "off"
+    },
+    "accessibility.signals.terminalCommandSucceeded": {
+        "sound": "off"
+    },
+    "accessibility.signals.terminalCommandFailed": {
+        "sound": "off"
+    },
+    "editor.accessibilitySupport": "on",
+    "accessibility.signals.chatResponseReceived": {
+        "sound": "off"
+    },
+    "accessibility.signals.taskFailed": {
+        "announcement": "off",
+        "sound": "off"
+    },
+    "accessibility.signalOptions.volume": 0,
+    "terminal.integrated.inheritEnv": false,
+    "codeium.enableConfig": {
+        "*": false
+    },
+    "git.openRepositoryInParentFolders": "always",
+    "makefile.configureOnOpen": true,
+    "jupyter.askForKernelRestart": false,
+    "python.defaultInterpreterPath": "/opt/homebrew/Caskroom/miniforge/base/envs/ml",
+    "mssql.connectionGroups": [
+        {
+            "name": "ROOT",
+            "id": "3E618445-BBF9-48C0-A7C4-806B3604C694"
+        }
+    ],
+    "mssql.connections": [],
+    "rust-analyzer.imports.group.enable": false
+}
