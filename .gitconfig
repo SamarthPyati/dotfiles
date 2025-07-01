@@ -1,7 +1,6 @@
 [user]
 	name = Samarth Sanjay Pyati
 	email = samarthpyati@gmail.com
-	password = <password>
 
 [core]
 	autocrlf = input
