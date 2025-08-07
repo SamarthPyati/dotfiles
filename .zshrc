@@ -11,6 +11,9 @@ alias python="python3"
 alias gs="git stash"
 alias gsp="git stash pop"
 alias gsl="git stash list"
+alias gsd="git stash drop"
+
+alias lsd="ls -d */"
 
 export PATH="/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/site-packages:$PATH"
 export PATH="/Users/samarth/Library/Python/3.13/bin:$PATH"
