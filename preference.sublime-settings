@@ -1,9 +1,18 @@
 // Settings in here override those in "Default/Preferences.sublime-settings",
 // and are overridden in turn by syntax-specific settings.
 {
-    "font_face": "Source Code Pro",
-    "font_size": 16,
+
+    // Font
+    "font_face": "Fira Code",
+    "font_size": 18,
     "default_font_size": 18,
+    "font_options":
+    [
+        "no_liga",
+        "no_clig",
+        "no_calt"
+    ],
+
     "save_on_focus_lost": true,
     "highlight_line": true,
     "caret_style": "phase",
@@ -11,11 +20,6 @@
     "line_padding_top": 1,
     "scroll_past_end": true,
 
-    "translate_tabs_to_spaces": true,
-    "trim_trailing_white_space_on_save": "not_on_caret",
-
-    "word_wrap": true,
-    "index_files": true,
 
     "ignored_packages":
     [
@@ -23,10 +27,20 @@
         "Vintage",
     ],
 
+    // Word wrap
+    "word_wrap": true,
+    "index_files": true,
+    "trim_trailing_white_space_on_save": true,
+
+
+    // Theme
     "theme": "predawn-DEV.sublime-theme",
     "color_scheme": "Packages/Predawn/predawn.tmTheme",
 
     // Tabs
+    "tab_size": 4,
+    "translate_tabs_to_spaces": true,
+    "highlight_modified_tabs": true,
     "predawn_tabs_active_underline": true,
     "predawn_tabs_large": false,
     "predawn_tabs_medium": false,
