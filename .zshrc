@@ -5,15 +5,36 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# ---- Custom alias ----
 alias pip="pip3"
 alias python="python3"
 
+# Git Alias 
+alias gi="git init"
 alias gs="git stash"
 alias gsp="git stash pop"
 alias gsl="git stash list"
 alias gsd="git stash drop"
 
+# Tmux Alias
+alias t="tmux"
+alias tls="tmux ls"
+alias tks="tmux kill-session -t"
+alias tat="tmux attach -t"
+
 alias lsd="ls -d */"
+alias tg="tree . --gitignore"
+
+
+# Yazi Config
+function y() {
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+    yazi "$@" --cwd-file="$tmp"
+    IFS= read -r -d '' cwd < "$tmp"
+    [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+    rm -f -- "$tmp"
+}
+
 
 export PATH="/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/site-packages:$PATH"
 export PATH="/Users/samarth/Library/Python/3.13/bin:$PATH"
@@ -96,12 +117,16 @@ ZSH_THEME="eastwood"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+    git
+)
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
+# Zsh autosuggestions
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# User configuration
 export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -109,9 +134,9 @@ export MANPATH="/usr/local/man:$MANPATH"
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='code'
+  export EDITOR=code
 else
-  export EDITOR='code'    
+  export EDITOR=code
 fi
 
 # Compilation flags
@@ -150,3 +175,7 @@ source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
+export PATH="/opt/homebrew/opt/postgresql@18/bin:$PATH"
+
+# Added by Antigravity
+export PATH="/Users/samarthpyati/.antigravity/antigravity/bin:$PATH"
