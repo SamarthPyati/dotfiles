@@ -8,6 +8,7 @@ fi
 # ---- Custom alias ----
 alias pip="pip3"
 alias python="python3"
+alias ipy="ipython"
 
 # Git Alias 
 alias gi="git init"
